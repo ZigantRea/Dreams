@@ -1,327 +1,89 @@
 <template>
 <div class="container">
-  <h4>Kids and family</h4>
+  <div v-for="category in this.images" :key="category.name">
+    <h4>{{ category.name }}</h4>
 
-<!-- drugi red -->
-      <div class="row">
-
-        <div class="col">
-          <q-img src="../assets/fotke/kids/DSC_3813.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/kids/DSC_7885.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/kids/DSC_0071.jpg">
-        </q-img>
-        </div>
-
+    <div class="row">
+      <div v-for="url in category.header" :key="url" class="col">
+        <q-img :src="url"/>
       </div>
-      <!-- treci red -->
-
-        <q-carousel
-      v-model="slide"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      swipeable
-      animated
-      control-color="primary"
-      navigation
-      padding
-      arrows
-      height="500px"
-      width=""
-      class="bg-grey-1 shadow-2 rounded-borders"
-    >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_7876.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_8010.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_7955.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="2" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_8312-3.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_8652-3.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_8283.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="3" class="column no-wrap">
-         <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_0347_2.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_0038_1.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kids/DSC_0518_4.jpg" />
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-<!-- X-mas -->
-     <h4>X-mas</h4>
-
-<!-- drugi red -->
-      <div class="row">
-
-        <div class="col">
-          <q-img src="../assets/fotke/boz/DSC_9244.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/boz/DSC_1742.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/boz/DSC_2356.jpg">
-        </q-img>
-        </div>
-
-      </div>
-      <!-- treci red -->
-
-        <q-carousel
-      v-model="slide"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      swipeable
-      animated
-      control-color="primary"
-      navigation
-      padding
-      arrows
-      height="500px"
-      width=""
-      class="bg-grey-1 shadow-2 rounded-borders"
-    >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_2434.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_2883.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_2356.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="2" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_1536.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_1740.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_6932.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="3" class="column no-wrap">
-         <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_9605-1.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_0249.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/boz/DSC_7810.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="4" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-6 full-height" src="https://cdn.quasar.dev/img/material.png" />
-          <q-img class="rounded-borders col-6 full-height" src="https://cdn.quasar.dev/img/donuts.png" />
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-
-<!-- LOVE -->
-<h4>Love</h4>
-
-<!-- drugi red -->
-      <div class="row">
-
-        <div class="col">
-          <q-img src="../assets/fotke/love/DSC_6998.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/love/DSC_9200-2.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/love/DSC_5150-3.jpg">
-        </q-img>
-        </div>
-
-      </div>
-      <!-- treci red -->
-
-        <q-carousel
-      v-model="slide"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      swipeable
-      animated
-      control-color="primary"
-      navigation
-      padding
-      arrows
-      height="500px"
-      width=""
-      class="bg-grey-1 shadow-2 rounded-borders"
-    >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="2" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="3" class="column no-wrap">
-         <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/love/DSC_5150-3.jpg" />
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-
-    <!-- Komercijlano-->
-<h4>Komercijalno</h4>
-
-<!-- drugi red -->
-      <div class="row">
-
-        <div class="col">
-          <q-img src="../assets/fotke/kom/DSC_7685.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/kom/DSC_7715.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/kom/DSC_7763.jpg">
-        </q-img>
-        </div>
-
-      </div>
-      <!-- treci red -->
-
-        <q-carousel
-      v-model="slide"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      swipeable
-      animated
-      control-color="primary"
-      navigation
-      padding
-      arrows
-      height="500px"
-      width=""
-      class="bg-grey-1 shadow-2 rounded-borders"
-    >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="2" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="3" class="column no-wrap">
-         <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/kom/DSC_7715.jpg" />
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-
-    <!-- Travel-->
-<h4>Travel</h4>
-
-<!-- drugi red -->
-      <div class="row">
-
-        <div class="col">
-          <q-img src="../assets/fotke/travel/DSC_7619.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/travel/DSC_8727.jpg">
-        </q-img>
-        </div>
-
-        <div class="col">
-          <q-img src="../assets/fotke/travel/DSC_9587-3.jpg">
-        </q-img>
-        </div>
-
-      </div>
-      <!-- treci red -->
-
-        <q-carousel
-      v-model="slide"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      swipeable
-      animated
-      control-color="primary"
-      navigation
-      padding
-      arrows
-      height="500px"
-      width=""
-      class="bg-grey-1 shadow-2 rounded-borders"
-    >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="2" class="column no-wrap">
-        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg" />
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="3" class="column no-wrap">
-         <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg"/>
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg" />
-          <q-img class="rounded-borders col-4 full-height" src="../assets/fotke/travel/DSC_8727.jpg" />
-        </div>
-      </q-carousel-slide>
-    </q-carousel>
-
     </div>
+
+    <q-carousel
+      swipeable
+      animated
+      v-model="slide"
+      arrows
+      thumbnails
+      infinite
+      v-if="category.carousel.length > 0"
+    >
+      <q-carousel-slide v-for="(url, i) in category.carousel" :key="i" :name="i" :img-src="url" class="column no-wrap" />
+
+    </q-carousel>
+
+  </div>
+</div>
 </template>
 
 <script>
 import { ref } from 'vue'
+import { initializeApp } from 'firebase/app'
+import firebaseConfig from 'src/plugins/firebase'
+import { getStorage, ref as sref, listAll, getDownloadURL } from 'firebase/storage'
+
+initializeApp(firebaseConfig.data());
+const storage = getStorage();
+
+const categoryCollection = new Map();
+categoryCollection.set('Kids and Family', 'kids-and-family');
+categoryCollection.set('X-Mas', 'x-mas');
+categoryCollection.set('Love', 'love');
+categoryCollection.set('Komercijalno', 'komercijalno');
+categoryCollection.set('Travel', 'travel');
+
+let allImages = [];
+
+function getAllImages () {
+  allImages = [];
+  for (const category of categoryCollection.keys()) {
+    listAll(sref(storage, categoryCollection.get(category)))
+      .then(async (res) => {
+        const obj = {
+          name: category,
+          header: [],
+          carousel: []
+        }
+
+        for (const [i, itemRef] of res.items.entries()) {
+          const url = await getDownloadURL(sref(storage, itemRef.fullPath))
+
+          if (i < 3) {
+            obj.header.push(url)
+          } else {
+            obj.carousel.push(url)
+          }
+        }
+        if (obj.header.length > 0) { allImages.push(obj) }
+      })
+  }
+  console.log(allImages)
+  allImages.sort((a, b) => (a.name > b.name) ? 1 : -1)
+}
+
 export default {
   setup () {
     return {
-      slide: ref(1),
-      onItemClick () {
-        // console.log('Clicked on an Item')
-      }
-    };
+      slide: ref(0)
+    }
+  },
+  data () {
+    return {
+      images: allImages
+    }
+  },
+  beforeCreate () {
+    getAllImages()
   }
   // name: 'galeria'
 };

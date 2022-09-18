@@ -14,8 +14,8 @@
 Welcome to my page.<br>
 My name is Rea. I am 21 years old and I come from a small village in Istria.   Maybe just enough information to get started? What do you think? <br>
 Let's continue anyway...<br>
-I am a student at the "Faculty of Informatics and Digital Technologies" in Rijeka. Yes, I'm studying computer science, but I've always loved colors, tones, shadows, light.
-Everything that a photographer encounters on a daily basis. I bought my first photo at the age of 14 with the money I got from Krizma. I will never forget the feeling of happiness I felt at that moment.
+I am a student at the "Faculty of Informatics and Digital Technologies" in Rijeka. Yes, I'm studying computer science, but I've always loved colors, tones, shadows and light.
+Everything that a photographer encounters on a daily basis.I bought my first camera at the age of 14. I will never forget the feeling of happiness I felt at that moment.
 Since then, my love for photography has grown more and more. And now, almost 8 years later, this hobby has turned into a business.<br>
 I photograph everything, whatever I need, but I still enjoy photographing children the most. Those little uncorrupted beings give the sweetest smile. When I photograph children and I am a child with them,
 that child who will always live in me gets a few minutes of freedom with them, and that makes me happy.<br>
@@ -30,13 +30,17 @@ And for the end… <br>
 <!-- -->
           <!-- ikone-->
           <div class="q-pa-md">
-            <a href="#" class="fa fa-instagram" style="font-size:200%" ></a>
-            <a href="#" class="fa fa-facebook" style="font-size:200%" ></a>
+            <a href="https://www.instagram.com/rea_zigant/" class="fa fa-instagram" style="font-size:200%" ></a>
+            <a href="https://hr-hr.facebook.com/" class="fa fa-facebook" style="font-size:200%" ></a>
           </div>
 <!-- fotka -->
         </div>
-        <div class="q-pa-md" style="max-width: 500px">
-        <img src="../assets/fotke/travel/me.jpg" width="125%"/>
+        <!-- <div class="q-pa-md" style="max-width: 500px">
+        <img src="../assets/fotke/DSC_1584-3.jpg" width="120%"/>
+        </div> -->
+        <div class="q-pa-md" style="max-width: 750px">
+        <img  width="100%" src="../assets/fotke/DSC_1584-3.jpg" />
+        <img  width="100%" src="../assets/fotke/DSC_1575.jpg" />
         </div>
        </div>
     </div>
@@ -79,49 +83,5 @@ a{
   background: #987A62;
   color: white;
 }
-
-/* .wrapper .icon{
-  position: relative;
-  background-color: #ffffff;
-  border-radius: 50%;
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 22px;
-  display: inline-block;
-  align-items: center;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  color: #333;
-  text-decoration: none;
-}
- .wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  line-height: 1.5;
-  font-size: 14px;
-  background-color: #ffffff;
-  color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
- .wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background-color: #987A62;
-  color: #ffffff;
-} */
 
 </style>

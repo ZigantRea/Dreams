@@ -16,6 +16,7 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "firebase": "^9.9.4",
     "quasar": "^1.0.0",
     "vue-i18n": "^8.0.0",
     "vue-silentbox": "^2.4.5",

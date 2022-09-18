@@ -6,9 +6,9 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') },
       { path: 'nesto', component: () => import('pages/Error404.vue'), },
       { path: 'omeni', component: () => import('src/pages/Omeni.vue') },
-      { path: 'galeria', component: () => import('pages/Galeria.vue') },
+      { path: 'galerija', component: () => import('pages/Galeria.vue') },
       { path: 'kontakt', component: () => import('pages/Kontakt.vue') },
-      { path: 'log', component: () => import('pages/novo.vue') },
+      { path: 'novo', component: () => import('pages/Novo.vue') },
     ],
   },
 
